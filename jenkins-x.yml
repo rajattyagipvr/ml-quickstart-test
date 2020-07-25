@@ -1,8 +1,8 @@
 buildPack: ml-python-service
 pipelineConfig:
-
   pipelines:
-      - pipeline: release
+    release:  
+      pipeline:
         stage: build
         name: testing
         step:
