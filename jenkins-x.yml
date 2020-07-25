@@ -1,4 +1,4 @@
-buildPack: ml-python-service
+buildPack: ml-python-training
 #pipelineConfig:
 #  pipelines:
 #    release:  
