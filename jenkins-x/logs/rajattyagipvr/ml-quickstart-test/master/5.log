@@ -1,0 +1,94 @@
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-8nwzs[0m
+{"level":"warn","ts":1595666241.6258945,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1595666241.626165,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-scsrc[0m
+{"level":"warn","ts":1595666242.165747,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1595666242.166607,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-rajattyagipvr-ml-quickstart-tes-pc2fz-nbwlv[0m
+{"level":"warn","ts":1595666714.4330275,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1595666716.5484369,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/*************/ml-quickstart-test.git @ v0.0.3 in path /workspace/source"}
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:8078b8462ad7bddf60e6c47d9800841d0bda39a8
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Cloning the Jenkins X versions repo https://github.com/*************/jenkins-x-versions.git with ref refs/heads/master to /home/.**/jenkins-x-versions
+Generated Git credentials file /home/.config/git/credentials
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-flake8[0m
+
+Showing logs for build [32mrajattyagipvr-ml-quickstart-tes-pc2fz-5[0m stage [32mfrom-build-pack[0m and container [32mstep-build-training[0m
+Collecting falcon==1.4.1 (from -r ./requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/e8/d0/20bb807dee65f1f163754670557b128eafce1710f6c9c363a38e357f3783/falcon-1.4.1-py2.py3-none-any.whl (159kB)
+Requirement already satisfied: future==0.17.1 in /root/anaconda3/lib/python3.7/site-packages (from -r ./requirements.txt (line 2)) (0.17.1)
+Collecting gunicorn==19.9.0 (from -r ./requirements.txt (line 3))
+  Downloading https://files.pythonhosted.org/packages/8c/da/b8dd8deb741bff556db53902d4706774c8e1e67265f69528c14c003644e6/gunicorn-19.9.0-py2.py3-none-any.whl (112kB)
+Requirement already satisfied: numpy==1.16.2 in /root/anaconda3/lib/python3.7/site-packages (from -r ./requirements.txt (line 4)) (1.16.2)
+Collecting onnxruntime==1.1.0 (from -r ./requirements.txt (line 5))
+  Downloading https://files.pythonhosted.org/packages/6e/83/281b7087011b76f993a5c4243fca0f1d40bb1d50cc8def493fca931c96e4/onnxruntime-1.1.0-cp37-cp37m-manylinux1_x86_64.whl (3.5MB)
+Requirement already satisfied: protobuf==3.7.1 in /root/anaconda3/lib/python3.7/site-packages (from -r ./requirements.txt (line 6)) (3.7.1)
+Collecting pytest==5.3.2 (from -r ./requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/19/cf/711f1d887cb92c5155c9a1eb338f1b5d2411b50e4492a3b20e4a188a22b2/pytest-5.3.2-py3-none-any.whl (234kB)
+Collecting scikit-learn==0.21.3 (from -r ./requirements.txt (line 8))
+  Downloading https://files.pythonhosted.org/packages/9f/c5/e5267eb84994e9a92a2c6a6ee768514f255d036f3c8378acfa694e9f2c99/scikit_learn-0.21.3-cp37-cp37m-manylinux1_x86_64.whl (6.7MB)
+Collecting python-mimeparse>=1.5.2 (from falcon==1.4.1->-r ./requirements.txt (line 1))
+  Downloading https://files.pythonhosted.org/packages/26/2e/03bce213a9bf02a2750dcb04e761785e9c763fc11071edc4b447eacbb842/python_mimeparse-1.6.0-py2.py3-none-any.whl
+Requirement already satisfied: six>=1.4.0 in /root/anaconda3/lib/python3.7/site-packages (from falcon==1.4.1->-r ./requirements.txt (line 1)) (1.12.0)
+Requirement already satisfied: setuptools in /root/anaconda3/lib/python3.7/site-packages (from protobuf==3.7.1->-r ./requirements.txt (line 6)) (40.8.0)
+Requirement already satisfied: py>=1.5.0 in /root/anaconda3/lib/python3.7/site-packages (from pytest==5.3.2->-r ./requirements.txt (line 7)) (1.8.0)
+Requirement already satisfied: more-itertools>=4.0.0 in /root/anaconda3/lib/python3.7/site-packages (from pytest==5.3.2->-r ./requirements.txt (line 7)) (6.0.0)
+Collecting importlib-metadata>=0.12; python_version < "3.8" (from pytest==5.3.2->-r ./requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/8e/58/cdea07eb51fc2b906db0968a94700866fc46249bdc75cac23f9d13168929/importlib_metadata-1.7.0-py2.py3-none-any.whl
+Collecting pluggy<1.0,>=0.12 (from pytest==5.3.2->-r ./requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/a0/28/85c7aa31b80d150b772fbe4a229487bc6644da9ccb7e427dd8cc60cb8a62/pluggy-0.13.1-py2.py3-none-any.whl
+Requirement already satisfied: attrs>=17.4.0 in /root/anaconda3/lib/python3.7/site-packages (from pytest==5.3.2->-r ./requirements.txt (line 7)) (19.1.0)
+Requirement already satisfied: packaging in /root/anaconda3/lib/python3.7/site-packages (from pytest==5.3.2->-r ./requirements.txt (line 7)) (19.0)
+Requirement already satisfied: wcwidth in /root/anaconda3/lib/python3.7/site-packages (from pytest==5.3.2->-r ./requirements.txt (line 7)) (0.1.7)
+Requirement already satisfied: scipy>=0.17.0 in /root/anaconda3/lib/python3.7/site-packages (from scikit-learn==0.21.3->-r ./requirements.txt (line 8)) (1.2.1)
+Collecting joblib>=0.11 (from scikit-learn==0.21.3->-r ./requirements.txt (line 8))
+  Downloading https://files.pythonhosted.org/packages/51/dd/0e015051b4a27ec5a58b02ab774059f3289a94b0906f880a3f9507e74f38/joblib-0.16.0-py3-none-any.whl (300kB)
+Collecting zipp>=0.5 (from importlib-metadata>=0.12; python_version < "3.8"->pytest==5.3.2->-r ./requirements.txt (line 7))
+  Downloading https://files.pythonhosted.org/packages/b2/34/bfcb43cc0ba81f527bc4f40ef41ba2ff4080e047acb0586b56b3d017ace4/zipp-3.1.0-py3-none-any.whl
+Requirement already satisfied: pyparsing>=2.0.2 in /root/anaconda3/lib/python3.7/site-packages (from packaging->pytest==5.3.2->-r ./requirements.txt (line 7)) (2.3.1)
+Installing collected packages: python-mimeparse, falcon, gunicorn, onnxruntime, zipp, importlib-metadata, pluggy, pytest, joblib, scikit-learn
+  Found existing installation: zipp 0.3.3
+    Uninstalling zipp-0.3.3:
+      Successfully uninstalled zipp-0.3.3
+  Found existing installation: importlib-metadata 0.0.0
+    Uninstalling importlib-metadata-0.0.0:
+      Successfully uninstalled importlib-metadata-0.0.0
+  Found existing installation: pluggy 0.9.0
+    Uninstalling pluggy-0.9.0:
+      Successfully uninstalled pluggy-0.9.0
+  Found existing installation: pytest 4.3.1
+    Uninstalling pytest-4.3.1:
+      Successfully uninstalled pytest-4.3.1
+  Found existing installation: scikit-learn 0.20.3
+    Uninstalling scikit-learn-0.20.3:
+      Successfully uninstalled scikit-learn-0.20.3
+Successfully installed falcon-1.4.1 gunicorn-19.9.0 importlib-metadata-1.7.0 joblib-0.16.0 onnxruntime-1.1.0 pluggy-0.13.1 pytest-5.3.2 python-mimeparse-1.6.0 scikit-learn-0.21.3 zipp-3.1.0
+Loading time: 0.007221 secs)
+Traceback (most recent call last):
+  File "app.py", line 38, in <module>
+    StandaloneApplication(falcon.API(), options).run()
+  File "app.py", line 20, in __init__
+    apiserver.config(api)
+  File "/workspace/source/apiserver.py", line 10, in config
+    api.add_route('/wine/{index:int(min=0)}', Wine())
+  File "/workspace/source/service.py", line 34, in __init__
+    self.clf = rt.InferenceSession("model.onnx")
+  File "/root/anaconda3/lib/python3.7/site-packages/onnxruntime/capi/session.py", line 25, in __init__
+    self._load_model(providers)
+  File "/root/anaconda3/lib/python3.7/site-packages/onnxruntime/capi/session.py", line 32, in _load_model
+    self._path_or_bytes, True)
+RuntimeError: /onnxruntime_src/onnxruntime/core/session/inference_session.cc:220 onnxruntime::InferenceSession::InferenceSession(const onnxruntime::SessionOptions&, const string&, onnxruntime::logging::LoggingManager*) status.IsOK() was false. Given model could not be parsed while creating inference session. Error message: Load model model.onnx failed. File doesn't exist
+Stacktrace:
+
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-training'. The execution of the pipeline has stopped.[0m
